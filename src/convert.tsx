@@ -2,7 +2,14 @@ import { ActionPanel, Action, Form, Icon } from "@raycast/api";
 import { useRef, useState } from "react";
 import { data } from "./utils/data";
 import { MeasureTimeEnum } from "./utils/enum";
+
 import { secondsConverter } from "./utils/seconds";
+import { milisecondsConverter } from "./utils/miliseconds";
+import { dayConverter } from "./utils/day";
+import { minuteConverter } from "./utils/minute";
+import { nanosecondsConverter } from "./utils/nanoseconds";
+import { weekConverter } from "./utils/week";
+import { microsecondsConverter } from "./utils/microseconds";
 
 export default function Command() {
   const dropdownRef = useRef<Form.Dropdown>(null);
@@ -14,8 +21,32 @@ export default function Command() {
   const [result, setResult] = useState<number>(0);
 
   function convertValues(){
-    if(typeFrom === MeasureTimeEnum.SECOND){
+    if(typeFrom === MeasureTimeEnum.SECOND) {
       const value = secondsConverter(typeTo, valueFrom);
+      setResult(value);
+    }
+    if(typeFrom === MeasureTimeEnum.MILISECOND) {
+      const value = milisecondsConverter(typeTo, valueFrom);
+      setResult(value);
+    }
+    if(typeFrom === MeasureTimeEnum.DAY) {
+      const value = dayConverter(typeTo, valueFrom);
+      setResult(value);
+    }
+    if(typeFrom === MeasureTimeEnum.MINUTE) {
+      const value = minuteConverter(typeTo, valueFrom);
+      setResult(value);
+    }
+    if(typeFrom === MeasureTimeEnum.WEEK) {
+      const value = weekConverter(typeTo, valueFrom);
+      setResult(value);
+    }
+    if(typeFrom === MeasureTimeEnum.NANOSECOND) {
+      const value = nanosecondsConverter(typeTo, valueFrom);
+      setResult(value);
+    }
+    if(typeFrom === MeasureTimeEnum.MICROSECOND) {
+      const value = microsecondsConverter(typeTo, valueFrom);
       setResult(value);
     }
   }

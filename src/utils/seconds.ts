@@ -1,9 +1,6 @@
 import { MeasureTimeEnum } from "./enum";
 
 export function secondsConverter(typeTo: string, valueFrom: number) {
-    const totalSecondsLeapYear = 366 * 24 * 60 * 60;
-    const totalSecondsYear = 365 * 24 * 60 * 60;
-
     switch (typeTo) {
         case MeasureTimeEnum.MILISECOND:
             return valueFrom * 1000;
@@ -21,10 +18,8 @@ export function secondsConverter(typeTo: string, valueFrom: number) {
             return valueFrom / 2592000;
         case MeasureTimeEnum.MONTH_31:
             return valueFrom / 2678400;
-        case MeasureTimeEnum.CALENDAR_YEAR_LEAP:
-            return valueFrom / totalSecondsLeapYear;
-        case MeasureTimeEnum.CALENDAR_YEAR:
-            return valueFrom / totalSecondsYear;
+        case MeasureTimeEnum.HOUR:
+            return valueFrom / 3600;
         default:
             return valueFrom;
     }
