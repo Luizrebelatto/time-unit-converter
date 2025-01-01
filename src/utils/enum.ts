@@ -7,6 +7,6 @@ export enum MeasureTimeEnum {
     HOUR = "Hour",
     DAY = "Day",
     WEEK = "Week",
-    MONTH_30 = "Month_30",
-    MONTH_31 = "Month_31",
+    MONTH_30 = "Month 30",
+    MONTH_31 = "Month 31",
 }

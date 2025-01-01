@@ -13,6 +13,8 @@ import { microsecondsConverter } from "./utils/microseconds";
 
 export default function Command() {
   const dropdownRef = useRef<Form.Dropdown>(null);
+  const dropdownRefTo = useRef<Form.Dropdown>(null);
+
   const [typeFrom, setTypeFrom] = useState<string>("");
   const [typeTo, setTypeTo] = useState<string>("");
 
@@ -73,7 +75,7 @@ export default function Command() {
           return <Form.Dropdown.Item value={item.title} title={item.title} key={index}/>;
         })}
       </Form.Dropdown>
-      <Form.Dropdown id="dropdown_to" title="Type to:" onChange={(text) => setTypeTo(text)} value={typeTo}>
+      <Form.Dropdown id="dropdown_to" title="Type to:" onChange={(text) => setTypeTo(text)} value={typeTo} ref={dropdownRefTo}>
         {data.map((item, index) => {
           return <Form.Dropdown.Item value={item.title} title={item.title} key={index}/>;
         })}
