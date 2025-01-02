@@ -14,6 +14,5 @@ export const data: IData[] = [
     { id: 6, title: MeasureTimeEnum.HOUR },
     { id: 7, title: MeasureTimeEnum.DAY },
     { id: 8, title: MeasureTimeEnum.WEEK },
-    { id: 9, title: MeasureTimeEnum.MONTH_30 },
-    { id: 10, title: MeasureTimeEnum.MONTH_31 },
+    { id: 9, title: MeasureTimeEnum.MONTH },
 ]

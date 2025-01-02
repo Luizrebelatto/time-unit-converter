@@ -3,13 +3,17 @@ import { useRef, useState } from "react";
 import { data } from "./utils/data";
 import { MeasureTimeEnum } from "./utils/enum";
 
-import { secondsConverter } from "./utils/seconds";
-import { milisecondsConverter } from "./utils/miliseconds";
-import { dayConverter } from "./utils/day";
-import { minuteConverter } from "./utils/minute";
-import { nanosecondsConverter } from "./utils/nanoseconds";
-import { weekConverter } from "./utils/week";
-import { microsecondsConverter } from "./utils/microseconds";
+import {
+  hourConverter,
+  microsecondsConverter,
+  milisecondsConverter,
+  minuteConverter,
+  monthConverter,
+  nanosecondsConverter,
+  secondsConverter,
+  weekConverter,
+  dayConverter
+} from "./utils/converters";
 
 export default function Command() {
   const dropdownRef = useRef<Form.Dropdown>(null);
@@ -49,6 +53,14 @@ export default function Command() {
     }
     if(typeFrom === MeasureTimeEnum.MICROSECOND) {
       const value = microsecondsConverter(typeTo, valueFrom);
+      setResult(value);
+    }
+    if(typeFrom === MeasureTimeEnum.MONTH) {
+      const value = monthConverter(typeTo, valueFrom);
+      setResult(value);
+    }
+    if(typeFrom === MeasureTimeEnum.HOUR) {
+      const value = hourConverter(typeTo, valueFrom);
       setResult(value);
     }
   }

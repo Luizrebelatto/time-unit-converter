@@ -1,4 +1,4 @@
-import { MeasureTimeEnum } from "./enum";
+import { MeasureTimeEnum } from "../enum";
 
 export function microsecondsConverter(typeTo: string, valueFrom: number) {
     switch (typeTo) {
@@ -14,10 +14,8 @@ export function microsecondsConverter(typeTo: string, valueFrom: number) {
             return valueFrom / 86400000000000;
         case MeasureTimeEnum.WEEK:
             return valueFrom / 604800000000000;
-        case MeasureTimeEnum.MONTH_30:
+        case MeasureTimeEnum.MONTH:
             return valueFrom / 2592000000000000;
-        case MeasureTimeEnum.MONTH_31:
-            return valueFrom / 2678400000000000;
         case MeasureTimeEnum.HOUR:
             return valueFrom / 3600000000;
         default:

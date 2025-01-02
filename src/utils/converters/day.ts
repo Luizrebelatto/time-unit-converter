@@ -1,4 +1,4 @@
-import { MeasureTimeEnum } from "./enum";
+import { MeasureTimeEnum } from "../enum";
 
 export function dayConverter(typeTo: string, valueFrom: number) {
     switch (typeTo) {
@@ -14,10 +14,8 @@ export function dayConverter(typeTo: string, valueFrom: number) {
             return valueFrom * 86400;
         case MeasureTimeEnum.WEEK:
             return valueFrom / 7;
-        case MeasureTimeEnum.MONTH_30:
+        case MeasureTimeEnum.MONTH:
             return valueFrom / 30;
-        case MeasureTimeEnum.MONTH_31:
-            return valueFrom / 31;
         case MeasureTimeEnum.HOUR:
             return valueFrom * 24;
         default:
