@@ -2,10 +2,9 @@
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "time-unit-converter",
   "title": "Time Unit Converter",
-  "description": "converter",
+  "description": "Extension to convert unit time(nanoseconds, microseconds, miliseconds, seconds, minute, hour, day, week, month)",
   "icon": "extension-icon.png",
   "author": "luiz_rebelatto",
-  "owner": "luiz-gabriel-rebelatto",
   "categories": [
     "Developer Tools",
     "Productivity",
@@ -16,7 +15,7 @@
     {
       "name": "convert",
       "title": "Convert",
-      "description": "",
+      "description": "convert time",
       "mode": "view"
     }
   ],
