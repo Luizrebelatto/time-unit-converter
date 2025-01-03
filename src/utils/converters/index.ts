@@ -9,13 +9,13 @@ import { weekConverter } from "./week";
 import { dayConverter } from "./day";
 
 export {
-    hourConverter,
-    microsecondsConverter,
-    milisecondsConverter,
-    minuteConverter,
-    monthConverter,
-    nanosecondsConverter,
-    secondsConverter,
-    weekConverter,
-    dayConverter,
-}
+  hourConverter,
+  microsecondsConverter,
+  milisecondsConverter,
+  minuteConverter,
+  monthConverter,
+  nanosecondsConverter,
+  secondsConverter,
+  weekConverter,
+  dayConverter,
+};
